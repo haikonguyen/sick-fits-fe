@@ -1,11 +1,5 @@
 import React from 'react';
 
-const AccountPage = () => {
-  return (
-    <div>
-      AccountPage
-    </div>
-  );
-};
+const AccountPage = () => <div>AccountPage</div>;
 
 export default AccountPage;
