@@ -4,11 +4,7 @@
   ],
   "rules": {
     "prettier/prettier": [
-      "error",
-      {
-        "jsxSingleQuote": true,
-        "singleQuote": true
-      }
+      "error"
     ]
   }
 }
