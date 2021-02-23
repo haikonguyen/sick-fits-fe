@@ -13,18 +13,14 @@ Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
 // eslint-disable-next-line react/prop-types
-const MyApp = ({ Component, pageProps, apollo }) => {
-  console.log(apollo);
-
-  return (
-    <ApolloProvider client={apollo}>
-      <Page>
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        <Component {...pageProps} />
-      </Page>
-    </ApolloProvider>
-  );
-};
+const MyApp = ({ Component, pageProps, apollo }) => (
+  <ApolloProvider client={apollo}>
+    <Page>
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+      <Component {...pageProps} />
+    </Page>
+  </ApolloProvider>
+);
 
 MyApp.getInitialProps = async function ({ Component, ctx }) {
   let pageProps = {};
